@@ -12,7 +12,7 @@ body{
 }
 .button{
 	height: 455px;
-	width: 37%;
+	width: 27%;
 
 	display: inline-block;
 
@@ -22,7 +22,7 @@ body{
 
 
 
-	transition:2s;
+	transition:.5s;
 
 	background-image: url(cd1.png);
 	background-size: contain;
@@ -32,14 +32,57 @@ body{
 
 .button:hover{
 	background-image:url(cd2.gif);
-	transition:2s;
+	transition:.5s;
 }
 a{
 	text-decoration: none;
 	color: red;
 }
+#aboutme{
+	background-image: url(cherry1.png);
+	background-size: contain;
+	background-repeat: no-repeat;
+	
+}
 
-#journal{
+#aboutme:hover{
+	background-image:url(cherry2.gif);
+	transition:.2s;
+}
+a{
+	text-decoration: none;
+	color: red;
+}
+#welcome{
+	background-image: url(welcome1.png);
+	
+	height: 800px;
+	width: 88%;
+	
+}
+
+#welcome:hover{
+	background-image:url(welcome2.gif);
+	height: 800px;
+	width: 88%;
+
+	display: inline-block;
+
+	font-family: varsity;
+	font-size: 1px;
+	text-align:left;
+
+	transition:.1s;
+}
+a{
+	text-decoration: none;
+	color: hotpink;
+}
+
+
+
+
+ #journal{
 	background-image: url(disco1.jpg);
 	
 	
@@ -48,7 +91,7 @@ a{
 
 #journal:hover{
 	background-image:url(disco2.gif);
-	transition:2s;
+	transition:.1s;
 }
 a{
 	text-decoration: none;
@@ -56,10 +99,11 @@ a{
 }
 
 
+
 	</style>
 </head>
 <body>
-
+<center>
 
 	<a href="projects.html">
 	<div class="button">
@@ -67,13 +111,26 @@ a{
 	</div>
 	</a>
 
+<a href="aboutme.html">
+	<div id="aboutme" class="button">
+		about me
+	</div>
+	</a>
 
+	
 <a href="journal.html">
 	<div id="journal" class="button">
 		journal
 	</div>
 	</a>
 
+<a href="welcome.html">
+	<div id="welcome" class="button">
+		welcome
+	</div>
+	</a> 
+
+</center>
 
 </body>
 </html>
