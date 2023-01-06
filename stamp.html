@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	
+	<style type="text/css">
+
+#jack{
+	height: 300px;
+	width:  300px;
+	background-image: url(jackypoo.png);
+	background-size: contain;
+	background-repeat: no-repeat;
+	position: absolute;
+
+}
+
+}
+
+
+	</style>
+</head>
+<body>
+<div id="background">
+
+<div id="jack"></div>
+</div>
+
+<script type="text/javascript">
+document.addEventListener("click", function makeDiv(event){
+
+console.log(event.clientX, event.clientY);
+
+jack.style.left = event.clientX - 150 + "px";
+jack.style.top = event.clientY - 150 + "px";
+
+
+})
+
+</script>
+
+</body>
+</html>
