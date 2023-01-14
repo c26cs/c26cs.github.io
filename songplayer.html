@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Image/Song Project</title>
+    <style>
+        /* center the header text and change color to BE0000 */
+        h1 {
+            text-align: center;
+            font-family: monospace;
+            color: #BE0000;
+        }
+    </style>
+  </head>
+  <body>
+    <h1>click on an album cover to play the song!</h1>
+    <div id="image-container">
+      <img src="passionpit.jpg" onclick="playSong(1)" width="550" height="550"/>
+      <img src="escapism.jpg" onclick="playSong(2)" width="550" height="550"/>
+      <img src="loveonbrain.jpg" onclick="playSong(3)" width="550" height="550"/>
+      <img src="tameimpala.jpg" onclick="playSong(4)" width="550" height="550"/>
+      <img src="mama.jpg" onclick="playSong(5)" width="550" height="550"/>
+      <img src="evermore.jpg" onclick="playSong(6)" width="550" height="550"/>
+      <img src="starboy.jpg" onclick="playSong(7)" width="550" height="550"/>
+      <img src="miguel.jpg" onclick="playSong(8)" width="550" height="550"/>
+      <img src="sza.jpg" onclick="playSong(9)" width="550" height="550"/>
+    </div>
+    <audio id="player">
+      <source id="song1" src="passionpit.mp3" type="audio/mpeg"/>
+      <source id="song2" src="escapism.mp3" type="audio/mpeg"/>
+      <source id="song3" src="loveonbrain.mp3" type="audio/mpeg"/>
+      <source id="song4" src="tameimpala.mp3" type="audio/mpeg"/>
+      <source id="song5" src="meandurmama.mp3" type="audio/mpeg"/>
+      <source id="song6" src="leftme.mp3" type="audio/mpeg"/>
+      <source id="song7" src="thewknd.mp3" type="audio/mpeg"/>
+      <source id="song8" src="surething.mp3" type="audio/mpeg"/>
+      <source id="song9" src="killbill.mp3" type="audio/mpeg"/>
+    </audio>
+    <script>
+      function playSong(songNumber) {
+        var player = document.getElementById("player");
+        player.src = document.getElementById("song" + songNumber).src;
+        player.play();
+      }
+    </script>
+  </body>
+</html>

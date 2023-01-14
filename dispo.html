@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <style>
+      /* center the camera image and set its size */
+      #camera {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 1000px;
+        height: 1000px;
+        margin: 50 auto;
+      }
+
+      /* center the grid of new images around the camera */
+      #grid {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-wrap: wrap;
+      }
+
+      /* set the size of each new image in the grid */
+      .grid-item {
+        width: 2000px;
+        height: 1555px;
+        margin: 10px;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="camera">
+      <img src="camera.jpg" onclick="showGrid()" alt="Camera">
+    </div>
+    <div id="grid" style="display: none;">
+      <img class="grid-item" src="dispo1.jpg" alt="Image 1">
+      <img class="grid-item" src="dispo2.jpg" alt="Image 2">
+      <img class="grid-item" src="dispo3.jpg" alt="Image 3">
+      <img class="grid-item" src="dispo4.jpg" alt="Image 4">
+      <img class="grid-item" src="dispo5.jpg" alt="Image 5">
+      <img class="grid-item" src="dispo6.jpg" alt="Image 6">
+      <img class="grid-item" src="dispo7.jpg" alt="Image 7">
+      <img class="grid-item" src="dispo8.jpg" alt="Image 8">
+      <img class="grid-item" src="dispo9.jpg" alt="Image 9">
+      <img class="grid-item" src="dispo10.jpg" alt="Image 10">
+      <img class="grid-item" src="dispo11.jpg" alt="Image 11">
+      <img class="grid-item" src="dispo12.jpg" alt="Image 12">
+      <img class="grid-item" src="dispo13.jpg" alt="Image 13">
+      <img class="grid-item" src="dispo14.jpg" alt="Image 14">
+      <img class="grid-item" src="dispo15.jpg" alt="Image 15">
+      <img class="grid-item" src="dispo16.jpg" alt="Image 16">
+      <img class="grid-item" src="dispo17.jpg" alt="Image 17">
+      <img class="grid-item" src="dispo18.jpg" alt="Image 18">
+      <img class="grid-item" src="dispo19.jpg" alt="Image 19">
+      <img class="grid-item" src="dispo20.jpg" alt="Image 20">
+      <img class="grid-item" src="dispo21.jpg" alt="Image 21">
+      <img class="grid-item" src="dispo22.jpg" alt="Image 22">
+      <img class="grid-item" src="dispo23.jpg" alt="Image 23">
+      <img class="grid-item" src="dispo24.jpg" alt="Image 24">
+      <img class="grid-item" src="dispo25.jpg" alt="Image 25">
+      <img class="grid-item" src="dispo26.jpg" alt="Image 26">
+      <img class="grid-item" src="dispo27.jpg" alt="Image 27">
+      <img class="grid-item" src="dispo28.jpg" alt="Image 28">
+      <img class="grid-item" src="dispo29.jpg" alt="Image 29">
+      <img class="grid-item" src="dispo30.jpg" alt="Image 30">
+      <img class="grid-item" src="dispo31.jpg" alt="Image 31">
+      <img class="grid-item" src="dispo32.jpg" alt="Image 32">
+      <img class="grid-item" src="dispo33.jpg" alt="Image 33">
+
+      <!-- Additional 30 images here -->
+    </div>
+
+    <script>
+      function showGrid() {
+        var grid = document.getElementById("grid");
+        grid.style.display = "flex";
+      }
+    </script>
+  </body>
+</html>

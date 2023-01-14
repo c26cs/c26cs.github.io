@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Camera Gallery</title>
+    <style>
+      body {
+        background-color: #000531;
+      }
+      .center {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+      }
+      h1 {
+        text-align: center;
+      }
+      .camera {
+        position: relative;
+        width: 200px;
+        height: 200px;
+        cursor: pointer;
+      }
+      .photo {
+        position: absolute;
+        bottom: -40px;
+        left: 50px;
+        width: 100px;
+        height: 100px;
+        opacity: 0;
+        transition: opacity 0.5s;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="center">
+      <h1>Tap the Camera</h1>
+      <div class="camera" onclick="changeImage()">
+        <img id="camera" src="camera.jpg" alt="camera">
+        <img id="photo" class="photo" src="photo1.jpg" alt="photo">
+      </div>
+    </div>
+    <script>
+      var cameras = ["camera1.jpg", "camera2.jpg", "camera3.jpg", ..., "camera33.jpg"];
+      var photos = ["photo1.jpg", "photo2.jpg", "photo3.jpg", ..., "photo33.jpg"];
+      var cameraIndex = 0;
+      var photoIndex = 0;
+
+      function changeImage() {
+        var camera = document.getElementById("camera");
+        var photo = document.getElementById("photo");
+        camera.src = cameras[cameraIndex];
+        photo.src = photos[photoIndex];
+        photo.style.opacity = 1;
+        cameraIndex = (cameraIndex + 1) % cameras.length;
+        photoIndex = (photoIndex + 1) % photos.length;
+      }
+    </script>
+  </body>
+</html>
