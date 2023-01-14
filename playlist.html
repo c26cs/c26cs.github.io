@@ -1,0 +1,27 @@
+<html>
+  <head>
+    <title>Song Player</title>
+  </head>
+  <body>
+    <div id="main">
+      <audio id="song" src="initial-song.mp3"></audio>
+    </div>
+    <script>
+      const mainDiv = document.getElementById('main');
+      const song = document.getElementById('song');
+      let currentSong = "initial-song.mp3";
+      const songFiles = ["cudi.mp3", "tameimpala.mp3", "thewknd.mp3", "passionpit.mp3", ".mp3", "song6.mp3", "song7.mp3", "song8.mp3", "song9.mp3", "song10.mp3"];
+      
+      mainDiv.addEventListener('click', function() {
+        // Change the song
+        let newSong = songFiles[Math.floor(Math.random() * songFiles.length)];
+        while (newSong == currentSong) {
+          newSong = songFiles[Math.floor(Math.random() * songFiles.length)];
+        }
+        currentSong = newSong;
+        song.src = newSong;
+        song.play();
+      });
+    </script>
+  </body>
+</html>

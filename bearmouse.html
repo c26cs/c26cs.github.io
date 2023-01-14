@@ -1,0 +1,26 @@
+<html>
+  <head>
+    <style>
+      body {
+        cursor: none;
+      }
+      
+      #cursor {
+        position: absolute;
+        width: 70px;
+        height: 100px;
+      }
+    </style>
+  </head>
+  <body>
+    <img id="cursor" src="bear.png" alt="cursor">
+    <script>
+      const cursor = document.getElementById("cursor");
+      
+      document.addEventListener("mousemove", event => {
+        cursor.style.left = `${event.clientX}px`;
+        cursor.style.top = `${event.clientY}px`;
+      });
+    </script>
+  </body>
+</html>
