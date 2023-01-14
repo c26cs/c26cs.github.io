@@ -1,0 +1,76 @@
+<html>
+
+<head>
+    <title>soup spawner</title>
+    <style>
+        /* Pink, blue, and yellow aesthetic */
+        body {
+            background-color: #FFC8E0
+; /* Pink */
+        }
+        h1 {
+            color: #FF7280; /* Light blue */
+        }
+        #soup-images {
+            background-color: #FFFF00; /* Yellow */
+        }
+        /* Large and centered text */
+        h1 {
+            text-align: center;
+            font-size: 50px;
+        }
+
+        h2 {
+            color: #FF7280; /* Light blue */
+        }
+        #soup-images {
+            background-color: #FFC8E0; /* Yellow */
+        }
+        /* Large and centered text */
+        h2 {
+            text-align: center;
+            font-size: 40px;
+        }
+        #num-input {
+            text-align: center;
+            font-size: 300px;
+        }
+        #submit-button {
+            text-align: center;
+            font-size: 25px;
+        }
+        /* Monospace font */
+        body {
+            font-family: monospace;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>welcome to soup spawner !!</h1>
+    <div id="num-input">
+        <form>
+    <h2>how many bowls of soup do you want?</h2>
+            <input type="number" id="bowls-input">
+            <br>
+            <input type="button" value="Submit" id="submit-button" onclick="showSoup()">
+        </form>
+    </div>
+    <div id="soup-images"></div>
+    <script>
+        function showSoup() {
+            // Get the number of bowls input by the user
+            var numBowls = document.getElementById("bowls-input").value;
+            // Get the element to display the soup images
+            var soupImages = document.getElementById("soup-images");
+            // Clear any previous soup images
+            soupImages.innerHTML = "";
+            // Add the correct number of soup images
+            for (var i = 0; i < numBowls; i++) {
+                soupImages.innerHTML += "<img src='soup.jpg' alt='bowl of soup'>"
+            }
+        }
+    </script>
+</body>
+
+</html>
