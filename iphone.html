@@ -1,0 +1,99 @@
+<head>
+  <style>
+    .container {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+    }
+
+    .iphone {
+      width: 25%;
+    }
+
+    .circles {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      width: 20%;
+    }
+
+    .circle {
+      width: 150px;
+      height: 150px;
+      border-radius: 100px;
+      margin: 50px;
+      cursor: pointer;
+    }
+
+    .red {
+      background-color: #FF66C4;
+    }
+
+    .blue {
+      background-color: #00C2CB;
+    }
+
+    .green {
+      background-color: #FFE790;
+    }
+
+    .yellow {
+      background-color: #AACFFF;
+    }
+
+    .purple {
+      background-color: #FFC7E9;
+    }
+
+    .orange {
+      background-color: #D578EF;
+    }
+
+    .popup {
+      display: none;
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      background-color: rgba(255, 255, 255, 0.8);
+      padding: 10px;
+      border-radius: 1px;
+    }
+
+    .popup img {
+      width: 100%;
+      height: auto;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <div class="circles">
+      <div class="circle red" id="red-circle"></div>
+      <div class="circle blue"></div>
+      <div class="circle green"></div>
+    </div>
+    <img src="iphone.jpg" alt="Iphone" class="iphone" id="iphone-img">
+    <div class="circles">
+      <div class="circle yellow"></div>
+      <div class="circle purple"></div>
+      <div class="circle orange"></div>
+    </div>
+
+    <div class="popup" id="image-popup">
+      <img src="image1.jpg" alt="Image">
+    </div>
+  </div>
+
+  <script>
+    const redCircle = document.getElementById("red-circle");
+    const popup = document.getElementById("image-popup");
+    const iphoneImg = document.getElementById("iphone-img");
+
+    redCircle.addEventListener("click", function() {
+      iphoneImg.src = "ski4.gif";
+    });
+  </script>
+</body>
+</html>

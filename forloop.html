@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+
+	<style type="text/css">
+		.hearts{
+			width: 400px;
+			height: 400px;
+			background-color: lightcyan;
+			margin: 3px;
+			display: inline-block;
+			background-image:url(https://64.media.tumblr.com/tumblr_m2u5g7XOkw1r46pepo1_500.gifv) ;
+			background-size: contain;
+			background-repeat: no-repeat;
+		
+		}
+	</style>
+</head>
+<body>
+
+<script type="text/javascript">
+	
+	function makeDivs (placeholder){
+		var box = document.createElement("div")
+		document.body.appendChild(box);
+		box.classList.add("hearts")
+		box.innerText = placeholder
+
+	}
+
+for(var i=1; i<1001; i=i+1)
+{makeDivs(i)}
+
+makeDivs()
+makeDivs()
+makeDivs()
+makeDivs()
+
+</script>
+</body>
+</html>
