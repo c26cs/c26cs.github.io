@@ -16,6 +16,7 @@
 </head>
 <body>
 	<div id="buggy"></div>
+	<audio id="carhorn" src="carhorn.mp3"></audio>
 <script type="text/javascript">
 	var buggy = document.getElementById("buggy");
 	buggy.style.left = "0px";
@@ -40,7 +41,11 @@
 			buggy.style.left = x +"px";
 			buggy.style.backgroundImage = "url('barbiecar2.png')";
 		}
-	})
+else if (event.keyCode == 32) { //spacebar
+		var carhorn = document.getElementById("carhorn");
+		carhorn.play();
+	}
+})
 </script>
 </body>
 </html>
