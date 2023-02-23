@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<style>
+		#buggy {
+			width: 700px;
+			height: 700px;
+			background-color: white;
+			right: 10px;
+			position: absolute;
+			background-image: url('barbiecar2.png');
+			background-size: cover;
+		}
+	</style>
+</head>
+<body>
+	<div id="buggy"></div>
+<script type="text/javascript">
+	var buggy = document.getElementById("buggy");
+	buggy.style.left = "0px";
+	var x = parseInt(buggy.style.left);
+
+	// define variables for the images
+	var image1 = new Image();
+	image1.src = "barbiecar2.png";
+	var image2 = new Image();
+	image2.src = "carmirrorimage.png";
+
+	document.addEventListener("keydown", function(event){
+		console.log(x)
+
+		if (event.keyCode == 39) { //right arrow
+			x = x+10;
+			buggy.style.left = x +"px";
+			buggy.style.backgroundImage = "url('carmirrorimage.png')";
+		}
+		else if (event.keyCode == 37) { //left arrow
+			x = x-10;
+			buggy.style.left = x +"px";
+			buggy.style.backgroundImage = "url('barbiecar2.png')";
+		}
+	})
+</script>
+</body>
+</html>
