@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	
+	<style type="text/css">
+
+#lexi1{
+	height: 300px;
+	width:  300px;
+	background-image: url(baby.png);
+	background-size: contain;
+	background-repeat: no-repeat;
+	position: absolute;
+
+}
+
+#lexi2{
+	height: 300px;
+	width:  300px;
+	background-image: url(baby.png);
+	background-size: contain;
+	background-repeat: no-repeat;
+	position: absolute;
+
+}
+#lexi3{
+	height: 300px;
+	width:  300px;
+	background-image: url(baby.png);
+	background-size: contain;
+	background-repeat: no-repeat;
+	position: absolute;
+
+}
+
+#lexi4{
+	height: 300px;
+	width:  300px;
+	background-image: url(baby.png);
+	background-size: contain;
+	background-repeat: no-repeat;
+	position: absolute;
+
+}
+
+#lexi5{
+	height: 300px;
+	width:  300px;
+	background-image: url(baby.png);
+	background-size: contain;
+	background-repeat: no-repeat;
+	position: absolute;
+
+}
+
+#lexi6{
+	height: 300px;
+	width:  300px;
+	background-image: url(baby.png);
+	background-size: contain;
+	background-repeat: no-repeat;
+	position: absolute;
+
+}
+
+#lexi7{
+	height: 300px;
+	width:  300px;
+	background-image: url(baby.png);
+	background-size: contain;
+	background-repeat: no-repeat;
+	position: absolute;
+
+}
+
+#lexi8{
+	height: 300px;
+	width:  300px;
+	background-image: url(baby.png);
+	background-size: contain;
+	background-repeat: no-repeat;
+	position: absolute;
+
+}
+#lexi9{
+	height: 300px;
+	width:  300px;
+	background-image: url(baby.png);
+	background-size: contain;
+	background-repeat: no-repeat;
+	position: absolute;
+
+}
+
+#lexi10{
+	height: 300px;
+	width:  300px;
+	background-image: url(baby.png);
+	background-size: contain;
+	background-repeat: no-repeat;
+	position: absolute;
+
+}
+
+
+}
+
+
+	</style>
+</head
+<body>
+<div id="background">
+<div class="image" id="lexi1" style="background-image: url(baby.png);"></div>
+<div class="image" id="lexi2" style="background-image: url(lexi2.png);"></div>
+<div class="image" id="lexi3" style="background-image: url(lexi3.png);"></div>
+<div class="image" id="lexi4" style="background-image: url(lexi4.png);"></div>
+<div class="image" id="lexi5" style="background-image: url(lexi5.png);"></div>
+<div class="image" id="lexi6" style="background-image: url(lexi6.png);"></div>
+<div class="image" id="lexi7" style="background-image: url(lexi7.png);"></div>
+<div class="image" id="lexi8" style="background-image: url(lexi8.png);"></div>
+<div class="image" id="lexi9" style="background-image: url(lexi9.png);"></div>
+<div class="image" id="lexi10" style="background-image: url(lexi10.png);"></div>
+</div>
+<script type="text/javascript">
+var images = document.getElementsByClassName("image");
+
+document.addEventListener("click", function makeDiv(event){
+
+    var randomIndex = Math.floor(Math.random() * images.length);
+    var selectedImage = images[randomIndex];
+
+    console.log(event.clientX, event.clientY);
+
+    selectedImage.style.left = event.clientX - 150 + "px";
+    selectedImage.style.top = event.clientY - 150 + "px";
+
+
+})
+
+</script>
+</body>
+</html>
