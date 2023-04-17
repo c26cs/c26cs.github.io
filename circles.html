@@ -1,0 +1,70 @@
+<html>
+  <head>
+    <style>
+      body {
+     
+      }
+      
+      #cursor {
+        position: absolute;
+        width: 100px;
+        height: 100px;
+      }
+
+      #cursor2 {
+        position: absolute;
+        width: 50px;
+        height: 50px;
+      }
+
+      #cursor3 {
+        position: absolute;
+        width: 70px;
+        height: 70px;
+      }
+
+
+    </style>
+  </head>
+  <body>
+    <img id="cursor" src="circle.png" alt="cursor">
+     <script>
+      const cursor = document.getElementById("cursor");
+      
+      document.addEventListener("mousemove", event => {
+        cursor.style.left = `${event.clientX}px`;
+        cursor.style.top = `${event.clientY}px`;
+      });
+    </script>
+    <img id="cursor2" src="circle2.png" alt="cursor2">
+    <script>
+      const cursor2 = document.getElementById("cursor2");
+      
+      document.addEventListener("mousemove", event => {
+        cursor2.style.left = `${event.clientX}px`;
+        cursor2.style.top = `${event.clientY}px`;
+      });
+    </script>
+    <img id="cursor3" src="circle3.png" alt="cursor3">
+    <script>
+      const cursor3 = document.getElementById("cursor3");
+      
+      document.addEventListener("mousemove", event => {
+        cursor3.style.left = `${event.clientX}px`;
+        cursor3.style.top = `${event.clientY}px`;
+      });
+    </script>
+  </body>
+</html>
+
+
+
+<!-- what is happening: -->
+<!-- -circles of different sizes 
+	 - many circles
+	 - changing color div
+	 - mouse follower
+	 - slowly spreads out of over time when mouse stays in one place -->
+
+<!-- questions:-->
+<!-- - is it all under one div or is it multiple divs with varying codes-->
