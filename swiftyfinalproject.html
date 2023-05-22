@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>tswift album ranking!!</title>
+  <style>
+    body {
+      background-image: url("tswiftbackground.jpg");
+      background-repeat: no-repeat;
+      background-size: cover;
+    }
+    .image {
+      position: absolute;
+      cursor: move;
+      width: 100px;
+      height: 100px;
+    }
+  </style>
+  <script>
+    function dragElement(element) {
+      let pos1 = 0,
+        pos2 = 0,
+        pos3 = 0,
+        pos4 = 0;
+      element.onmousedown = dragMouseDown;
+
+      function dragMouseDown(e) {
+        e = e || window.event;
+        e.preventDefault();
+        pos3 = e.clientX;
+        pos4 = e.clientY;
+        document.onmouseup = closeDragElement;
+        document.onmousemove = elementDrag;
+      }
+
+      function elementDrag(e) {
+        e = e || window.event;
+        e.preventDefault();
+        pos1 = pos3 - e.clientX;
+        pos2 = pos4 - e.clientY;
+        pos3 = e.clientX;
+        pos4 = e.clientY;
+        element.style.top = element.offsetTop - pos2 + "px";
+        element.style.left = element.offsetLeft - pos1 + "px";
+      }
+
+      function closeDragElement() {
+        document.onmouseup = null;
+        document.onmousemove = null;
+      }
+    }
+  </script>
+</head>
+  <div class="container">
+    <img src="debut.jpg" class="image" id="debut" alt="Debut">
+    <img src="fearless.jpg" class="image" id="fearless" alt="Fearless">
+    <img src="speaknow.jpg" class="image" id="speaknow" alt="Speak Now">
+    <img src="red.jpg" class="image" id="red" alt="Red">
+    <img src="1989.jpg" class="image" id="1989" alt="1989">
+    <img src="rep.jpg" class="image" id="rep" alt="Reputation">
+    <img src="lover.jpg" class="image" id="lover" alt="Lover">
+    <img src="folklore.jpg" class="image" id="folklore" alt="Folklore">
+    <img src="evermore.jpg" class="image" id="evermore" alt="Evermore">
+    <img src="midnights.jpg" class="image" id="midnights" alt="Midnights">
+    <!-- Add more image tags for additional images -->
+    <!-- Remember to update the image source (src), class, and id -->
+  </div>
+  
+  <script>
+    // Make the images draggable
+    const images = document.getElementsByClassName("image");
+    for (let i = 0; i < images.length; i++) {
+      dragElement(images[i]);
+    }
+  </script>
+</body>
+</html>
